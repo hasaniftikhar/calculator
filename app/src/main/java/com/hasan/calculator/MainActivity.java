@@ -218,18 +218,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 txtView.setText(String.valueOf(n1 + n2));
-                if (operator.equals("+")) {
-                    txtView.setText(n1 + n2);
-                } else if (operator.equals("-")) {
-                    txtView.setText(n1 - n2);
-                } else if (operator.equals("*")) {
-                    txtView.setText(n1 * n2);
-                } else if (operator.equals("/")) {
-                    txtView.setText(n1 / n2);
+                switch (operator) {
+                    case "+":
+                        txtView.setText(n1 + n2);
+                        break;
+                    case "-":
+                        txtView.setText(n1 - n2);
+                        break;
+                    case "/":
+                        txtView.setText(n1 / n2);
+                        break;
+                    case "*":
+                        txtView.setText(n1 * n2);
+                        break;
                 }
             }
 
         });
+
 
         button_clear.setOnClickListener(new View.OnClickListener() {
             @Override
